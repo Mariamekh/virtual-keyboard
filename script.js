@@ -1,16 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-continue */
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-use-before-define */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-bitwise */
-/* eslint-disable max-len */
-/* eslint-disable no-undef */
-/* eslint-disable linebreak-style */
-/* eslint-disable max-classes-per-file */
+
 window.onload = () => {
   const keyboard = new Keyboard(localStorage.getItem('lang') || 'en');
   keyboard.renderKeyboard();
