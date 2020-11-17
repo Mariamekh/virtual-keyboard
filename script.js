@@ -1,4 +1,20 @@
-
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-continue */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-use-before-define */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-bitwise */
+/* eslint-disable max-len */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
+/* eslint-disable max-classes-per-file */
+window.onload = () => {
+  const keyboard = new Keyboard(localStorage.getItem('lang') || 'en');
+  keyboard.renderKeyboard();
+};
 const keyArr = [{
   text: {
     en: '`',
@@ -835,7 +851,6 @@ const keyArr = [{
 },
 ];
 
-
 class Key {
   constructor({
     text = {
@@ -911,7 +926,6 @@ class Keyboard {
     const keyboard = document.createElement('div');
     keyboard.classList.add('keyboard');
     container.append(keyboard);
-
 
     const keyboardKeys = document.createElement('div');
     keyboard.append(keyboardKeys);
@@ -1079,7 +1093,7 @@ class Keyboard {
 
     const value = this.caps ^ this.shift ? key.toUpperCase() : key.toLowerCase();
     const positionStart = inputArea.selectionStart;
-    inputArea.value = inputArea.value.substring(0, positionStart) + inputArea.value.substring(positionStart);
+    inputArea.value = inputArea.value.substring(0, positionStart) + value + inputArea.value.substring(positionStart);
     this.setPosition(positionStart + 1);
   }
 
@@ -1205,8 +1219,3 @@ class Keyboard {
     inputArea.selectionEnd = pos;
   }
 }
-
-window.onload = () => {
-  const keyboard = new Keyboard(localStorage.getItem('lang') || 'en');
-  keyboard.renderKeyboard();
-};
