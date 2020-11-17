@@ -1083,7 +1083,7 @@ class Keyboard {
 
         const value = this.caps ^ this.shift ? key.toUpperCase() : key.toLowerCase();
         const positionStart = inputArea.selectionStart;
-        inputArea.value = inputArea.value.substring(0, positionStart) + value + inputArea.value.substring(positionStart);
+        inputArea.value = inputArea.value.substring(0, positionStart) + inputArea.value.substring(positionStart);
         this.setPosition(positionStart + 1);
     }
 
